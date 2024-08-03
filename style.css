@@ -15,8 +15,8 @@ body {
   background: linear-gradient(to top right, #0e1c26, #2a454b, #294861);
 }
 .container {
-  width: 40%;
-  height: 85%;
+  width: 90%;
+  height: 90%;
   text-align: center;
   padding: 1rem;
   background: linear-gradient(to right, #d397fa, #8364e8);
@@ -29,7 +29,7 @@ body {
   margin-bottom: 0.4rem;
 }
 #question {
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   font-family: "Oswald", sans-serif;
   margin-bottom: 0.3rem;
 }
