@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top right, #0e1c26, #2a454b, #294861);
+}
+.container {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(to right, #9fccfa, #0974f1);
+  border-radius: 1rem;
+}
