@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -13,10 +15,63 @@ body {
   background: linear-gradient(to top right, #0e1c26, #2a454b, #294861);
 }
 .container {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 85%;
   text-align: center;
   padding: 1rem;
-  background: linear-gradient(to right, #9fccfa, #0974f1);
+  background: linear-gradient(to right, #d397fa, #8364e8);
   border-radius: 1rem;
+}
+.container h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  margin-bottom: 0.4rem;
+}
+#question {
+  font-size: 1.9rem;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 0.3rem;
+}
+#questionCount {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  background: #c4abff;
+  padding: 0.4rem;
+  border-radius: 0.7rem;
+}
+#optionList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#optionList li {
+  background: transparent;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  border-radius: 3rem;
+  width: 80%;
+  transition: all 0.6s ease-in-out;
+}
+#optionList li:hover {
+  border: 1px solid #90ee90;
+  background: #90ee90;
+  cursor: pointer;
+}
+#checkBtn {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 1.4rem;
+  background: transparent;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+  background: #90ee90;
+  cursor: pointer;
+  margin-top: 0.7rem;
 }
