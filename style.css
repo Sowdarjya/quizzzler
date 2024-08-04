@@ -15,12 +15,13 @@ body {
   background: linear-gradient(to top right, #0e1c26, #2a454b, #294861);
 }
 .container {
-  width: 70%;
-  height: 80%;
+  max-width: 100%;
+  max-height: 100%;
   text-align: center;
-  padding: 0.6rem;
   background: linear-gradient(to right, #d397fa, #8364e8);
   border-radius: 1rem;
+  box-shadow: 0 0 2.5rem;
+  padding: 0.2rem;
 }
 .container h1 {
   font-size: 1.8rem;
@@ -28,8 +29,21 @@ body {
   font-family: "Edu AU VIC WA NT Hand", cursive;
   margin-bottom: 0.4rem;
 }
+.container h3 {
+  font-size: 1.5rem;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  color: #90ee90;
+  background: #0e1c26;
+  border-radius: 2rem;
+}
+#questionCount {
+  background: #1a1a1a;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: #fff;
+}
 #question {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "Oswald", sans-serif;
   margin-bottom: 0.3rem;
 }
@@ -50,16 +64,17 @@ body {
 #optionList button {
   background: transparent;
   padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  border: 1px solid black;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  border: 1px solid #0e1c26;
   border-radius: 3rem;
   width: 80%;
   transition: all 0.6s ease-in-out;
 }
 #optionList button:hover {
-  border: 1px solid #90ee90;
-  background: #90ee90;
+  border: 1px solid #fff;
+  background: #1a1a1a;
+  color: #fff;
   cursor: pointer;
 }
 #checkBtn {
@@ -74,4 +89,17 @@ body {
   background: #90ee90;
   cursor: pointer;
   margin-top: 0.7rem;
+}
+#results-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+}
+#results-container p {
+  font-size: 1.3rem;
+}
+#results-container span {
+  font-size: 1.3rem;
 }
