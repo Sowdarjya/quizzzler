@@ -15,14 +15,15 @@ body {
   background: linear-gradient(to top right, #0e1c26, #2a454b, #294861);
 }
 .container {
-  max-width: 100%;
+  width: 90%;
   max-height: 100%;
   text-align: center;
   background: linear-gradient(to right, #d397fa, #8364e8);
   border-radius: 1rem;
   box-shadow: 0 0 2.5rem;
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
+.container h3,
 .container h1 {
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -30,8 +31,6 @@ body {
   margin-bottom: 0.4rem;
 }
 .container h3 {
-  font-size: 1.5rem;
-  font-family: "Edu AU VIC WA NT Hand", cursive;
   color: #90ee90;
   background: #0e1c26;
   border-radius: 2rem;
