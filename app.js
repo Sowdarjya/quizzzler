@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const question = document.getElementById("question");
 const questionCount = document.getElementById("questionCount");
+const optionList = document.getElementById("optionList");
 
 let i = 0;
 
@@ -23,7 +24,13 @@ function showQuestion(data) {
 }
 
 function showOptions(data) {
-  let arr = data.incorrect_answers;
-  arr[0] = data.correct_answer;
-  console.log(arr);
+  let options = data.incorrect_answers;
+  console.log(data.correct_answer);
+  options[3] = data.correct_answer;
+  options.sort();
+  options.forEach((element) => {
+    let option = document.createElement("li");
+    option.innerHTML = element;
+    optionList.appendChild(option);
+  });
 }
