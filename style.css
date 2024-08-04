@@ -16,7 +16,7 @@ body {
 }
 .container {
   width: 70%;
-  height: 90%;
+  height: 80%;
   text-align: center;
   padding: 0.6rem;
   background: linear-gradient(to right, #d397fa, #8364e8);
@@ -33,9 +33,9 @@ body {
   font-family: "Oswald", sans-serif;
   margin-bottom: 0.3rem;
 }
-#questionCount {
+#questionCategory {
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   margin-bottom: 0.7rem;
   background: #c4abff;
   padding: 0.4rem;
@@ -47,7 +47,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-#optionList li {
+#optionList button {
   background: transparent;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -57,7 +57,7 @@ body {
   width: 80%;
   transition: all 0.6s ease-in-out;
 }
-#optionList li:hover {
+#optionList button:hover {
   border: 1px solid #90ee90;
   background: #90ee90;
   cursor: pointer;

@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const question = document.getElementById("question");
-const questionCount = document.getElementById("questionCount");
+const category = document.getElementById("questionCategory");
 const optionList = document.getElementById("optionList");
 
 let i = 0;
@@ -11,7 +11,6 @@ async function fetchData() {
       "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple"
     );
     let data = await response.json();
-    console.log(data.results[i]);
     showQuestion(data.results[i]);
     showOptions(data.results[i]);
   } catch (error) {
@@ -21,16 +20,21 @@ async function fetchData() {
 fetchData();
 function showQuestion(data) {
   question.innerHTML = ` Q${i + 1}. ${data.question}`;
+  category.innerHTML = `Category- ${data.category}`;
 }
 
 function showOptions(data) {
   let options = data.incorrect_answers;
-  console.log(data.correct_answer);
+
   options[3] = data.correct_answer;
   options.sort();
+  let option;
   options.forEach((element) => {
-    let option = document.createElement("li");
+    option = document.createElement("button");
+    option.classList.add("btn");
     option.innerHTML = element;
     optionList.appendChild(option);
   });
+
+  console.log(option);
 }
