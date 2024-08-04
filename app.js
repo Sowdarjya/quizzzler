@@ -30,7 +30,7 @@ function showQuestion(data) {
 }
 
 function showOptions(data) {
-  // result.innerHTML = " ";
+  result.innerHTML = " ";
   let options = data.incorrect_answers;
 
   options[3] = data.correct_answer;
