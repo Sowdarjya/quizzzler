@@ -4,6 +4,7 @@ const category = document.getElementById("questionCategory");
 const optionList = document.getElementById("optionList");
 
 let i = 0;
+let correctAnswer;
 
 async function fetchData() {
   try {
@@ -13,6 +14,7 @@ async function fetchData() {
     let data = await response.json();
     showQuestion(data.results[i]);
     showOptions(data.results[i]);
+    correctAnswer = data.results[i].correct_answer;
   } catch (error) {
     console.error(error);
   }
@@ -28,13 +30,29 @@ function showOptions(data) {
 
   options[3] = data.correct_answer;
   options.sort();
+
+  optionList.innerHTML = "";
+
   let option;
   options.forEach((element) => {
     option = document.createElement("button");
     option.classList.add("btn");
     option.innerHTML = element;
+    option.addEventListener("click", () => checkAnswer(element));
     optionList.appendChild(option);
   });
+}
 
-  console.log(option);
+function checkAnswer(selectedOption) {
+  if (selectedOption === correctAnswer) {
+    alert("Correct!");
+  } else {
+    alert("Incorrect!");
+  }
+  i++;
+  if (i < 10) {
+    fetchData();
+  } else {
+    alert("Quiz Completed!");
+  }
 }
