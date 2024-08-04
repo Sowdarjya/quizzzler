@@ -84,9 +84,7 @@ body {
   height: 70px;
   width: 100%;
 }
-#results-container p {
-  font-size: 1.3rem;
-}
+#results-container p,
 #results-container span {
   font-size: 1.3rem;
 }
